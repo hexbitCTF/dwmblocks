@@ -157,6 +157,29 @@ To use this feature, define the `CLICKABLE_BLOCKS` feature macro in your
 Apart from that, you need `dwm` to be patched with
 [statuscmd](https://dwm.suckless.org/patches/statuscmd/).
 
+## My Configuration
+
+Status bar blocks (defined in `config.h`):
+
+| # | Script | Interval | Signal | Description |
+| :- | :--- | :-: | :-: | :--- |
+| 1 | `music-title` | 1s | 11 | Now-playing scrolling title |
+| 2 | `volume` | 0s (signal) | 12 | Volume percentage or Muted |
+| 3 | `brightness` | 0s (signal) | 13 | Backlight level |
+| 4 | `memory` | 3s | 3 | RAM usage (GiB used/total) |
+| 5 | `cpu` | 3s | 14 | CPU load percentage |
+| 6 | `battery` | 30s | 1 | Battery charge + charging status |
+| 7 | `wifi` | 3s | 15 | Connection state (Online/Offline) |
+| 8 | `month-day` | 3600s | 2 | Calendar date |
+| 9 | `clock` | 60s | 16 | 24-hour time |
+
+All blocks are clickable via `statuscmd` patch in dwm — left-click shows info, middle-click opens the script for editing.
+
+Custom `config.h` settings:
+- No delimiter between blocks
+- Clickable blocks enabled
+- Max block output: 128 characters
+
 ## Credits
 
 This work would not have been possible without
